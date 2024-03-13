@@ -1,0 +1,4 @@
+colorama==0.4.4
+itemadapter==0.8.0
+prettytable==3.10.0
+scrapy==2.11.1
