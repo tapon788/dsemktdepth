@@ -9,7 +9,6 @@ class SpMktdeptSpider(scrapy.Spider):
     name = "sp_mktdept"
     allowed_domains = ["dse.com.bd"]
     watchlist = ['IFIC','AGNISYSL']
-    #watchlist = ['IFIC',]
 
     def start_requests(self):
 
@@ -71,10 +70,8 @@ class SpMktdeptSpider(scrapy.Spider):
         pt = PrettyTable()
         pt.field_names = ['Buy Price', 'Buy Volume', 'Sell Price', 'Sell Volume']
         for r in maintable[0]:
-            #
             buy_sell_combined_row = r+maintable[1][cnt]
             if buy_sell_combined_row:
-                #print(buy_sell_combined_row)
                 pt.add_row(buy_sell_combined_row)
             cnt += 1
         print(pt)
